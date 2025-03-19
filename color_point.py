@@ -13,6 +13,7 @@ class ColorPoint(Point):
         super().__init__(x, y)  # this replaces self.x and self.y
         self.color = color
 
+    @property
     def __str__(self):
         return f"<{self.color}: {self.x}, {self.y}>"
 
