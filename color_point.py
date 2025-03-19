@@ -1,8 +1,8 @@
-import random
+
 
 from point import Point
 
-class ColorPoint:
+class ColorPoint(Point):
     def __init__(self, x,y, color):
         # raise an exception if we try to have not a number
         if not isinstance(x,(int, float)):
@@ -10,7 +10,7 @@ class ColorPoint:
         if not isinstance(y,(int, float)):
             raise TypeError("y must be a number")
 
-        super.__init__(x,y) # this replaces self.x and self.y
+        super().__init__(x, y)  # this replaces self.x and self.y
         self.color = color
 
     def __str__(self):
