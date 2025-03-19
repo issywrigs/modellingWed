@@ -16,7 +16,7 @@ class ColorPoint:
     def __str__(self):
         return f"<{self.color}: {self.x}, {self.y}>"
 
-p = ColorPoint ("1", "2", "red")
+p = ColorPoint (1, 2, "red")
 p.color = "rojo"
 p.x = 200
 
