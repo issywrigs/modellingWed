@@ -10,14 +10,16 @@ class ColorPoint:
         if not isinstance(y,(int, float)):
             raise TypeError("y must be a number")
 
-        self.x = x
-        self.y = y
+        super.__init__(x,y) # this replaces self.x and self.y
         self.color = color
 
     def __str__(self):
         return f"<{self.color}: {self.x}, {self.y}>"
 
-p = ColorPoint ("bob", "Jane", "red")
+p = ColorPoint ("1", "2", "red")
+p.color = "rojo"
+p.x = 200
+
 print(p.distance_orig())
 print(p)
 
